@@ -1417,6 +1417,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6322524975194178231, guid: 66b5682f91482024781e7144d159e431, type: 3}
+--- !u!1 &149179470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149179471}
+  - component: {fileID: 149179472}
+  m_Layer: 0
+  m_Name: ObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149179471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149179470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149179472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149179470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e1f326b2dcc04488fd04a8ac87d4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionObjectHUD: {fileID: 667548694}
+  gameObjects:
+  - {fileID: 112404302}
+  - {fileID: 1606237806}
+  - {fileID: 1035134286}
+  decals:
+  - {fileID: 812225865}
+  - {fileID: 155138493}
+  - {fileID: 1596902071}
 --- !u!1 &154065875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8800238943130225417, guid: 66b5682f91482024781e7144d159e431, type: 3}
@@ -1444,6 +1497,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7094344846028486957, guid: 66b5682f91482024781e7144d159e431, type: 3}
+--- !u!1 &155138493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163039311319308041, guid: 9070ae6694da9f94aa7965e51bd195c0, type: 3}
+  m_PrefabInstance: {fileID: 317569272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &179952625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7228437024062615618, guid: 66b5682f91482024781e7144d159e431, type: 3}
@@ -4701,6 +4759,7 @@ GameObject:
   - component: {fileID: 667548691}
   - component: {fileID: 667548693}
   - component: {fileID: 667548692}
+  - component: {fileID: 667548694}
   m_Layer: 5
   m_Name: Mission Object HUD
   m_TagString: Untagged
@@ -4826,6 +4885,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667548690}
   m_CullTransparentMesh: 1
+--- !u!114 &667548694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667548690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16486edf6e09e9345b567f040b1c60e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentObjectText: {fileID: 481858757}
+  currentDecalText: {fileID: 94587992}
+  totalObjects: 0
+  totalDecals: 0
 --- !u!1 &669247340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,6 +5702,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1883535617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &812225865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163039311319308041, guid: 9070ae6694da9f94aa7965e51bd195c0, type: 3}
+  m_PrefabInstance: {fileID: 9101075501407210539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &822170185 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1720619661920409218, guid: 66b5682f91482024781e7144d159e431, type: 3}
@@ -5944,7 +6024,7 @@ GameObject:
   - component: {fileID: 851884128}
   - component: {fileID: 851884127}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9307,7 +9387,7 @@ GameObject:
   - component: {fileID: 1191283316}
   - component: {fileID: 1191283315}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11778,6 +11858,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5580156321152954976, guid: 66b5682f91482024781e7144d159e431, type: 3}
+--- !u!1 &1596902071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163039311319308041, guid: 9070ae6694da9f94aa7965e51bd195c0, type: 3}
+  m_PrefabInstance: {fileID: 390910898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1604113355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8995271579679930556, guid: 66b5682f91482024781e7144d159e431, type: 3}
@@ -12406,7 +12491,7 @@ GameObject:
   - component: {fileID: 1649305443}
   - component: {fileID: 1649305442}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Wall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13792,7 +13877,7 @@ GameObject:
   - component: {fileID: 1932443797}
   - component: {fileID: 1932443796}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Wall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18987,6 +19072,10 @@ SceneRoots:
   - {fileID: 56762953}
   - {fileID: 1883535617}
   - {fileID: 916943718}
+  - {fileID: 1191283318}
+  - {fileID: 1932443799}
+  - {fileID: 851884130}
+  - {fileID: 1649305445}
   - {fileID: 1320576112}
   - {fileID: 1861031696}
   - {fileID: 112404307}
@@ -19001,7 +19090,4 @@ SceneRoots:
   - {fileID: 984262694}
   - {fileID: 591436437}
   - {fileID: 2027621651}
-  - {fileID: 1191283318}
-  - {fileID: 1932443799}
-  - {fileID: 851884130}
-  - {fileID: 1649305445}
+  - {fileID: 149179471}
